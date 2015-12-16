@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class LoginWindow extends JFrame {
+	int x;
 	private final JButton btnRegisterUser = new JButton("Register User");
 	public LoginWindow() {
 		getContentPane().setForeground(new Color(0, 0, 0));
