@@ -31,6 +31,7 @@ public class SingletonClient extends ObservableClient {
 
 	public SingletonClient(String host, int port) throws IOException {
 		super(host, port); // Call the superclass constructor
+	
 	}
 
 	/**

@@ -1,5 +1,6 @@
 package Controllers;
 
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -12,7 +13,6 @@ import commen.Com;
 import ennam.ObjectType;
 import ennam.OperationType;
 import Client.SingletonClient;
-import GUI.ILogin;
 import GUI.LoginGUI;
 import Entity.Login;
 import Entity.User;;
@@ -20,7 +20,7 @@ import Entity.User;;
 
 public class LoginController implements Observer{
 
-	private SingletonClient client = new SingletonClient("localhost", 3306);
+	private SingletonClient client ;
 	private long requestNumber;
 	private HashMap<Long, Method> handlerMap;
 	private User user;
@@ -29,6 +29,12 @@ public class LoginController implements Observer{
 
 	public LoginController(LoginGUI loginGUI) throws IOException {
 		// TODO Auto-generated constructor stub
+		
+		//this.icmMain = icmMain;
+		client = SingletonClient.getInstance();
+		client.addObserver(this);
+		loginGUI.setCtrl(this);
+		handlerMap = new HashMap<>();
 		login(loginGUI);
 	}
 	

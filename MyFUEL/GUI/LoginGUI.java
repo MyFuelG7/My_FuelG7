@@ -34,6 +34,7 @@ public class LoginGUI extends JDialog implements ActionListener {
 	private JPanel buttonPane;
 	private JTextField passwordField;
 	JFrame frame;
+	private LoginController ctrl;
 
 	/**
 	 * Create the dialog.
@@ -122,9 +123,9 @@ public class LoginGUI extends JDialog implements ActionListener {
 		return passwordField.getText();
 	}
 
-	/*public void setCtrl(LoginController ctrl) {
+	public void setCtrl(LoginController ctrl) {
 		this.ctrl =  ctrl;
-	}*/
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
