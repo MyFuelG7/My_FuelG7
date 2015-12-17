@@ -7,3 +7,6 @@
 /MarketingPersonGUI.class
 /StationManagerGUI.class
 /StationWorkerGUI.class
+/LoginWindow.class
+/StartWindow.class
+/IStartWindow.class

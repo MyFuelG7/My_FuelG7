@@ -60,8 +60,8 @@ public class SingletonClient extends ObservableClient {
 	 */
 
 	public void handleMessageFromController(Object msg) {
-		setChanged();
-		notifyObservers(msg);
+		setChanged(); //Marks this Observable object as having been changed
+		notifyObservers(msg); //notify about the change
 	}
 
 	/**

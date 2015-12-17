@@ -1,6 +1,8 @@
 package Entity;
 
-public class User {
+import Customer;
+
+public class User extends Customer{
 
 	private String name;
 	private String lastName = "";
@@ -17,6 +19,14 @@ public class User {
 	}
 
 	public void setName() {
+		throw new UnsupportedOperationException();
+	}
+	
+	public void getLastName() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void setLastName() {
 		throw new UnsupportedOperationException();
 	}
 
