@@ -19,7 +19,7 @@ public class MyFuelMain implements ILogin{
 	
 	public MyFuelMain(){
 		startwindow = new StartWindow();
-		//startwindow.setCtrl(this);
+		startwindow.setCtrl(this);
 	}
 
 

@@ -1,8 +1,9 @@
 package ServerController;
 
-/*
-import icm.entity.Login;
-import icm.entity.User;
+
+import Entity.Login;
+import Entity.User;
+import ServerController.UserController;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,7 +17,7 @@ import java.sql.SQLException;
  *  @author_Group_3
  *
  */
-/*public class LoginControl extends ObjectManager
+public class LoginControl extends ObjectManager
 {
 	
 	//constructors
@@ -25,7 +26,7 @@ import java.sql.SQLException;
 	 * 
 	 * @param conn The connection to MySQL database
 	 */
-/*	public LoginController(Connection conn) {
+	public LoginControl(Connection conn) {
 		super(conn);
 	}
 
@@ -37,7 +38,7 @@ import java.sql.SQLException;
 	 * and null pointer if not
 	 * @see icm.controller.ObjectManager#loadObject(java.lang.Object)
 	 */
-/*	@Override
+	@Override
 	public Object loadObject(Object obj) {
 		Login login = (Login)obj;
 		PreparedStatement ps;
@@ -79,10 +80,10 @@ import java.sql.SQLException;
 	 * Not in use for this class
 	 * @see icm.controller.ObjectManager#storeObject(java.lang.Object)
 	 */
-/*	@Override
+	@Override
 	public Object storeObject(Object obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-}*/
+}

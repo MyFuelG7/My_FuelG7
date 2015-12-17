@@ -3,7 +3,7 @@ package Server;
 import java.io.IOException;
 import java.sql.Connection;
 
-//import ServerController.DBController;
+import ServerController.DBController;
 import ocsf.server.AbstractServer;
 import ocsf.server.ConnectionToClient;
 
@@ -11,17 +11,16 @@ import ocsf.server.ConnectionToClient;
 import commen.Com;
 
 public class Server {
-	int x;
-}
-	
-/*	public class server extends AbstractServer {
+
+
+	public class server extends AbstractServer {
 		// Class variables ***************************************************
 
 		/**
 		 * The default port to listen on.
 		 */
 		// final public static int DEFAULT_PORT = 5555;
-/*		private Connection conn;
+		private Connection conn;
 		private DBController controller;
 
 		// Constructors ****************************************************
@@ -32,7 +31,7 @@ public class Server {
 		 * @param port
 		 *            The port number to connect on.
 		 */
-	/*	public server(int port) {
+		public server(int port) {
 			super(port);
 		}
 
@@ -46,7 +45,7 @@ public class Server {
 		 * @param client
 		 *            The connection from which the message originated.
 		 */
-/*		public void handleMessageFromClient(Object msg, ConnectionToClient client) {
+		public void handleMessageFromClient(Object msg, ConnectionToClient client) {
 
 			try {
 				Object result = controller.execute((Com) msg);
@@ -61,7 +60,7 @@ public class Server {
 		 * This method overrides the one in the superclass. Called when the server
 		 * starts listening for connections.
 		 */
-/*		protected void serverStarted() {
+		protected void serverStarted() {
 			System.out.println("Server listening for connections on port "
 					+ getPort());
 		}
@@ -70,7 +69,7 @@ public class Server {
 		 * This method overrides the one in the superclass. Called when the server
 		 * stops listening for connections.
 		 */
-/*		protected void serverStopped() {
+		protected void serverStopped() {
 			System.out.println("Server has stopped listening for connections.");
 		}
 
@@ -99,5 +98,5 @@ public class Server {
 
 	}
 
-}*/
+}
 

@@ -30,7 +30,7 @@ public class LoginGUI extends JDialog implements ActionListener {
 	private JLabel lblPassword;
 	private JTextField userId;
 	private JLabel lblEnterDetailsPlase;
-	private LoginController ctrl;
+	private LoginController loginCrtl;
 	private JPanel buttonPane;
 	private JTextField passwordField;
 	JFrame frame;
@@ -39,6 +39,7 @@ public class LoginGUI extends JDialog implements ActionListener {
 	 * Create the dialog.
 	 */
 	public LoginGUI(JFrame mainWindow) {
+		
 		super(mainWindow, true);
 		mainWindow.dispose();
 		frame= new JFrame();
@@ -121,17 +122,20 @@ public class LoginGUI extends JDialog implements ActionListener {
 		return passwordField.getText();
 	}
 
-	public void setCtrl(LoginController ctrl) {
+	/*public void setCtrl(LoginController ctrl) {
 		this.ctrl =  ctrl;
-	}
+	}*/
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		try{
 		if (e.getSource() == loginButton)
-			if (ctrl != null){ //problem ->setCtrl
-				ctrl.login();
-			}
+			System.out.println("befor");
+			//if (ctrl != null){ 
+				//UserGui usersceen = new UserGui(); function from meital
+				loginCrtl = new LoginController(this);
+				//ctrl.login();
+			//}
 		if (e.getSource() == cancelButton) 
 			frame.dispose();
 		}

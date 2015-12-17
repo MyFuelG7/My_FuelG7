@@ -29,7 +29,7 @@ public class SingletonClient extends ObservableClient {
 	 *            The interface type variable.
 	 */
 
-	private SingletonClient(String host, int port) throws IOException {
+	public SingletonClient(String host, int port) throws IOException {
 		super(host, port); // Call the superclass constructor
 	}
 

@@ -4,6 +4,7 @@ package GUI;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
+import Controllers.LoginController;
 import Controllers.MyFuelMain;
 
 import java.awt.Color;
@@ -19,10 +20,12 @@ public class StartWindow extends JFrame implements ActionListener{
 		
 		
 		
-       private IStartWindow screen ;
+       private IStartWindow screen;
         
 		private final JButton btnRegisterUser = new JButton("Register User");
 		private final JButton btnUnregisterUser = new JButton("Un-register User");
+		private MyFuelMain ctrl;
+		private LoginController ctrl1;
 		
 		public StartWindow()
 		{
@@ -73,7 +76,9 @@ public class StartWindow extends JFrame implements ActionListener{
 			this.setVisible(true);
 		}
 
-
+		public void setCtrl(MyFuelMain myFuelMain) {
+			this.ctrl = myFuelMain;
+		}
 		
 		public void actionPerformed(ActionEvent e) {
 			if(e.getSource() == btnRegisterUser ){
@@ -89,11 +94,13 @@ public class StartWindow extends JFrame implements ActionListener{
 		 public void ScreenRegisterUser()
 		 {
 			 LoginGUI login = new LoginGUI(this);
+		//	 login.setCtrl(ctrl1);
 		 }
 
 
 		 public void ScreenUnRegisterUser(){
-	
+			 
+
 }
 
 

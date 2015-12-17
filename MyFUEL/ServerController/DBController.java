@@ -1,12 +1,13 @@
-/*package ServerController;
+package ServerController;
 
 import java.sql.Connection;
 
+import Controllers.LoginController;
 import Server.Server;
 import commen.Com;
 import commen.ReturnedObject;
 import ennam.ObjectType;
-//import commen.ReturnedObject;
+import commen.ReturnedObject;
 
 /**
  * This class is a controller that checks a type of connections and 
@@ -17,7 +18,7 @@ import ennam.ObjectType;
  *  @author_Group_7
  *
  */
-/*public class DBController {
+public class DBController {
 	
 	private Connection conn;
 	private Server server;
@@ -37,22 +38,22 @@ import ennam.ObjectType;
 	 * @param cmd 
 	 * @return
 	 */
-/*	public Object execute(Com cmd){
+	public Object execute(Com cmd){
 		ObjectManager ctrl = null;
 		
 		switch(cmd.getType()){
 		
-		case CHEKORDERSTATUS:{
+	/*	case CHEKORDERSTATUS:{
 			ctrl = new ChekOrderStatus(conn);
 			break;
-		}
+		}*/
 			
 		case LOGIN:{
-			ctrl = new ChekLoginDetails(conn);
+			ctrl = new LoginControl(conn);//ChekLoginDetails(conn);
 			break;
 		}
 		
-		case LOGOUT:{
+		/*case LOGOUT:{
 			ctrl = new Logout(conn);
 			break;
 		}
@@ -109,7 +110,7 @@ import ennam.ObjectType;
 		case CHANGEORDERSTATUS:{
 			ctrl = new ChangeOrderStuts(conn);
 			break;
-		}	
+		}	*/
 		
 	}
 		
@@ -125,7 +126,7 @@ import ennam.ObjectType;
 			ReturnedObject ans = new ReturnedObject(reqnum);
 			ans.setObject(ctrl.storeObject(cmd.getObject()));
 			if(ctrl.getClass().toString().equals("MailController"))
-				server.sendToAllClients(ans);
+			//	server.sendToAllClients(ans);
 		
 			return ans;
 			
@@ -139,4 +140,4 @@ import ennam.ObjectType;
 		return 0; ///DELETE THIS!!!!!!
 	}
 	
-}*/
+}
