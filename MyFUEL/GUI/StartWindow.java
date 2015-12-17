@@ -93,7 +93,9 @@ public class StartWindow extends JFrame implements ActionListener{
 		
 		 public void ScreenRegisterUser()
 		 {
-			 LoginGUI login = new LoginGUI(this);
+			 LoginGUI login;
+			 if(this.ctrl !=null)
+				 login = new LoginGUI(this);
 		//	 login.setCtrl(ctrl1);
 		 }
 

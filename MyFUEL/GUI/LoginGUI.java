@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import Controllers.ClientController;
 import Controllers.LoginController;
 
 public class LoginGUI extends JDialog implements ActionListener {
@@ -35,7 +36,7 @@ public class LoginGUI extends JDialog implements ActionListener {
 	private JTextField passwordField;
 	JFrame frame;
 	private LoginController ctrl;
-
+	private ClientController clientctr;
 	/**
 	 * Create the dialog.
 	 */
@@ -131,9 +132,10 @@ public class LoginGUI extends JDialog implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		try{
 		if (e.getSource() == loginButton)
-			System.out.println("befor");
 			//if (ctrl != null){ 
 				//UserGui usersceen = new UserGui(); function from meital
+				clientctr =new ClientController();
+				clientctr.connect();
 				loginCrtl = new LoginController(this);
 				//ctrl.login();
 			//}
