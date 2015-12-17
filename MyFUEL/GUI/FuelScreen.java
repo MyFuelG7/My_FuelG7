@@ -13,7 +13,10 @@ import java.awt.Font;
 import java.awt.Color;
 
 public class FuelScreen extends JFrame implements ActionListener{
+	
 	public FuelScreen() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
 		getContentPane().setBackground(Color.CYAN);
 		getContentPane().setLayout(null);
 		
@@ -37,7 +40,7 @@ public class FuelScreen extends JFrame implements ActionListener{
 		JButton btnBack = new JButton("Back");
 		btnBack.setBounds(12, 13, 97, 25);
 		getContentPane().add(btnBack);
-		
+		this.setVisible(true);
 	}
 
 	@Override
