@@ -1,28 +1,38 @@
 package Entity;
-
+/**
+ * 
+ * @author Group 7
+ *
+ */
 public class Company {
-
+    /** the id of the company*/
 	private String CompanyID;
-	private String CompenyName;
-
-	public void getCompanyID() {
-		throw new UnsupportedOperationException();
+	/**name of the company*/
+	private String CompanyName;
+	
+	public void company(String CompanyName, String CompanyID) {
+	//	throw new UnsupportedOperationException();
+		this.CompanyID = CompanyID;
+		this.CompanyName = CompanyName;
 	}
 
-	public void setCompanyID() {
-		throw new UnsupportedOperationException();
+	public String getCompanyID() {
+	//	throw new UnsupportedOperationException();
+		return CompanyID;
 	}
 
-	public void gerCompanyName() {
-		throw new UnsupportedOperationException();
+	public void setCompanyID(String CompanyID) {
+	//	throw new UnsupportedOperationException();
+		this.CompanyID = CompanyID;	}
+
+	public String getCompanyName() {
+	//	throw new UnsupportedOperationException();
+		return CompanyName;
 	}
 
-	public void serCompanyName() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void company() {
-		throw new UnsupportedOperationException();
+	public void setCompanyName(String CompanyName) {
+	//	throw new UnsupportedOperationException();
+		this.CompanyName = CompanyName;
 	}
 
 }

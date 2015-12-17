@@ -8,5 +8,12 @@
 /StationManagerGUI.class
 /StationWorkerGUI.class
 /LoginWindow.class
+<<<<<<< HEAD
 /StartWindow.class
 /IStartWindow.class
+=======
+/UserGui.class
+/OpenScreen.class
+/FuelScreen.class
+/FuelForHomeScreen.class
+>>>>>>> branch 'master' of https://github.com/MyFuelG7/My_FuelG7.git
