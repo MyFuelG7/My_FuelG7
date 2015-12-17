@@ -68,6 +68,7 @@ public class UserGui extends JFrame implements ActionListener{
 		}
 		else {
 			this.dispose();
+			int a;
 			//LoginGUI f = new LoginGUI();
 			
 		}
