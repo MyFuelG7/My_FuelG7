@@ -1,6 +1,5 @@
 package Entity;
 
-import Customer;
 
 public class User extends Customer{
 
