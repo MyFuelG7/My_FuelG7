@@ -16,7 +16,7 @@ import ennam.UserType;
  *  @author_Group_3
  *
  */
-public class UserController extends ObjectManager
+/*public class UserController extends ObjectManager
 {
 	
 	//constructors
@@ -25,7 +25,7 @@ public class UserController extends ObjectManager
 	 * 
 	 * @param conn The connection to MySQL database
 	 */
-	public UserController(Connection conn) {
+	/*public UserController(Connection conn) {
 		super(conn);
 	}
 
@@ -37,7 +37,7 @@ public class UserController extends ObjectManager
 	 * and null pointer if not
 	 * @see icm.controller.ObjectManager#loadObject(java.lang.Object)
 	 */
-	@Override
+	/*@Override
 	public Object loadObject(Object obj) {
 		int id = (int)obj;
 		PreparedStatement ps;
@@ -81,31 +81,30 @@ public class UserController extends ObjectManager
 				}
 				rs.close();
 				
-				ps = conn.prepareStatement(querryEngineer);
+			/*	ps = conn.prepareStatement(querryEngineer);
 				ps.setInt(1, id);
 				rs = ps.executeQuery();
 				
 				if( rs.next()){
 					user.setPhone(rs.getString("phone"));	
-					user.setRole(UserRole.ENGINEER);			/*##########################################*/
+					user.setRole(UserRole.ENGINEER);			
 				}
 				rs.close();
 				
-				ps = conn.prepareStatement(querryManager);		/*##########################################*/
-				ps.setInt(1, id);				/*##########################################*/
-				rs = ps.executeQuery();							/*##########################################*/
+				ps = conn.prepareStatement(querryManager);		
+				ps.setInt(1, id);				
+				rs = ps.executeQuery();							
 																
-				if(rs.next()){									/*##########################################*/
-					switch(rs.getString("System")){				/*##########################################*/
+				if(rs.next()){									
+					switch(rs.getString("System")){				
 					
-					case "SUPERVISOR": 							/*##########################################*/
-						user.setRole(UserRole.SUPERVISOR);		/*##########################################*/
-						break;									/*##########################################*/
-					case "DIRECTOR":							/*##########################################*/
-						user.setRole(UserRole.DIRECTOR);		/*##########################################*/
-						break;									/*##########################################*/
-					}											/*##########################################*/
-				}												/*##########################################*/
+					case "SUPERVISOR": 							
+						user.setRole(UserRole.SUPERVISOR);		
+					case "DIRECTOR":							
+						user.setRole(UserRole.DIRECTOR);		
+						break;									
+					}											
+				}												
 				
 				
 				
@@ -121,7 +120,7 @@ public class UserController extends ObjectManager
 		
 		return user;
 	}
-
+/*
 	@Override
 	public void removeObject(Object obj) {
 		// TODO Auto-generated method stub
@@ -132,10 +131,10 @@ public class UserController extends ObjectManager
 	 * Not in use for this class
 	 * @see icm.controller.ObjectManager#storeObject(java.lang.Object)
 	 */
-	@Override
+/*	@Override
 	public Object storeObject(Object obj) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-}
+}*/

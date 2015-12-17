@@ -1,4 +1,4 @@
-package ServerController;
+/*package ServerController;
 
 import java.sql.Connection;
 
@@ -17,7 +17,7 @@ import ennam.ObjectType;
  *  @author_Group_7
  *
  */
-public class DBController {
+/*public class DBController {
 	
 	private Connection conn;
 	private Server server;
@@ -37,7 +37,7 @@ public class DBController {
 	 * @param cmd 
 	 * @return
 	 */
-	public Object execute(Com cmd){
+/*	public Object execute(Com cmd){
 		ObjectManager ctrl = null;
 		
 		switch(cmd.getType()){
@@ -139,4 +139,4 @@ public class DBController {
 		return 0; ///DELETE THIS!!!!!!
 	}
 	
-}
+}*/
