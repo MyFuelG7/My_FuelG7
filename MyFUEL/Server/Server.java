@@ -10,7 +10,9 @@ import ocsf.server.ConnectionToClient;
 
 import commen.Com;
 
-public class Server {}
+public class Server {
+	int x;
+}
 	
 /*	public class server extends AbstractServer {
 		// Class variables ***************************************************
