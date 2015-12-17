@@ -12,7 +12,6 @@ public class Customer {
 	}*/
 
 	public void getCustomerType() {
-		System.out.println("");
 	//	throw new UnsupportedOperationException();
 	}
 
