@@ -46,7 +46,7 @@ public class SingletonClient extends ObservableClient {
 	 */
 	public static SingletonClient getInstance() throws IOException {
 		if (instance == null) {
-			instance = new SingletonClient("", 0);
+			instance = new SingletonClient("loclhost", 3306);
 		}
 		return instance;
 	}

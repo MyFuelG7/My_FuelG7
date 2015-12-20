@@ -1,5 +1,9 @@
 package ServerController;
 
+import Entity.CompanyManager;
+import Entity.Enterprise;
+import Entity.MarketingManager;
+import Entity.StationManager;
 import Entity.User;
 import Entity.Worker;
 
@@ -40,6 +44,7 @@ public class UserController extends ObjectManager
 	@Override
 	public Object loadObject(Object obj) {
 		int id = (int)obj;
+		// obj.getUserID();
 		PreparedStatement ps;
 		
 		String querryUser = "select * from user U where U.userID = ?";
@@ -51,14 +56,21 @@ public class UserController extends ObjectManager
 		
 		User user = new User();
 		Worker worker = new Worker();
+		MarketingManager marketingmanager= new MarketingManager();
+		CompanyManager companyManager =new CompanyManager();
+		Enterprise enterprise = new Enterprise();
+		StationManager stationmanager = new StationManager();
+			
 		try{
 			ps = conn.prepareStatement(querryUser);
 			ps.setInt(1, id);			
 			ResultSet rs = ps.executeQuery();
-			if( rs.next()){
+				if( rs.next()){
+					
+				//get all the information
 				user.setCustomerID();//rs.getInt("userID"));
 				user.setName();//rs.getString("Name"));
-				user.setLastName();rs.getString("lastName");
+				user.setLastName();//rs.getString("lastName");
 				user.getCustomerID();//rs.getInt("ID"));
 				user.setEmail();//rs.getString("email"));
 				user.setPassword();
@@ -69,49 +81,43 @@ public class UserController extends ObjectManager
 				user.setUserType();
 			
 				rs.close();
+				}
 				
 				ps = conn.prepareStatement(querryStationWorker);
 				ps.setInt(1, id);
 				rs = ps.executeQuery();
 				
 				if( rs.next()){
+					//get all the information
+					worker.setCustomerID();//rs.getInt("userID"));
+					worker.setName();//rs.getString("Name"));
+					worker.setLastName();//rs.getString("lastName");
+					worker.getCustomerID();//rs.getInt("ID"));
+					worker.setEmail();//rs.getString("email"));
+					worker.setPassword();
+					worker.setCreditNumber();
+					worker.setCustomerType();
+					worker.setPlenNumber();
+					worker.setStatus();
+					worker.setUserType();
 					worker.setWorkerNumber();
 					worker.setRole();
 					worker.setBelonging();
 				}
 				rs.close();
 				
-				/*ps = conn.prepareStatement(querryEngineer);
+				ps = conn.prepareStatement(querryMarketingManager);
 				ps.setInt(1, id);
 				rs = ps.executeQuery();
-				
-				if( rs.next()){
-					user.setPhone(rs.getString("phone"));	
-					user.setRole(UserRole.ENGINEER);			
+				/**************************/
+				if( rs.next())
+				{
+					marketingmanager.setBelonging();
+					marketingmanager.setCreditNumber();
+					rs.close();//בתוך הסוגרים????
 				}
-				rs.close();
-				
-				ps = conn.prepareStatement(querryManager);		
-				ps.setInt(1, id);				
-				rs = ps.executeQuery();							
-																
-				if(rs.next()){									
-					switch(rs.getString("System")){				
-					
-					case "SUPERVISOR": 							
-						user.setRole(UserRole.SUPERVISOR);		
-					case "DIRECTOR":							
-						user.setRole(UserRole.DIRECTOR);		
-						break;									
-					}											
-				}		*/										
-				
-				
-				
-			}
-			else
-				user = null;
-			
+				else
+					user = null;
 			rs.close();
 		}
 		catch (SQLException ex){

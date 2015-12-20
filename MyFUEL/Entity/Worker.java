@@ -1,6 +1,6 @@
 package Entity;
 
-public class Worker {
+public class Worker extends User{
 
 	private Integer WorkerNumber;
 	private String Role;

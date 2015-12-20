@@ -53,7 +53,7 @@ public class LoginGUI extends JDialog implements ActionListener {
 		buttonPane = new JPanel();
 		buttonPane.setBounds(0, 238, 434, 23);
 		buttonPane.setLayout(new GridLayout(0, 2, 0, 0));
-		frame.add(buttonPane);
+		frame.getContentPane().add(buttonPane);
 		
 		loginButton = new JButton("Log In");
 		loginButton.setBackground(new Color(255, 255, 255));
@@ -77,7 +77,7 @@ public class LoginGUI extends JDialog implements ActionListener {
 		panel.setLayout(null);
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setBounds(0, 0, 434, 238);
-		frame.add(panel);
+		frame.getContentPane().add(panel);
 		
 		lblUserId = new JLabel("User ID :");
 		lblUserId.setForeground(new Color(0, 0, 204));
@@ -94,6 +94,7 @@ public class LoginGUI extends JDialog implements ActionListener {
 		panel.add(lblPassword);
 
 		userId = new JTextField();
+		userId.setText("1");
 		userId.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		userId.setColumns(10);
 		userId.setBounds(182, 71, 137, 28);
@@ -145,5 +146,19 @@ public class LoginGUI extends JDialog implements ActionListener {
 		catch (IOException ex) {
 			ex.printStackTrace();
 		}
+	}
+
+
+	public void setUserID(String string) {
+		// TODO Auto-generated method stub
+		this.userId.setText(" ");
+		
+	}
+
+
+	public void setUserPassword(String string) {
+		// TODO Auto-generated method stub
+		this.passwordField.setText(" ");
+		
 	}
 }

@@ -69,7 +69,7 @@ public class User extends Customer{
 		throw new UnsupportedOperationException();
 	}
 
-	public void getUserType() {
+	public String getUserType() {
 		throw new UnsupportedOperationException();
 	}
 

@@ -16,6 +16,7 @@ import commen.Com;
 import ennam.ObjectType;
 import ennam.OperationType;
 import Client.SingletonClient;
+import GUI.FuelScreen;
 import GUI.LoginGUI;
 import Entity.Login;
 import Entity.User;;
@@ -43,14 +44,15 @@ public class LoginController implements Observer{
 	
 
 	private void refreshUserInfoPanel(User user){
-	/*	if(user == null){
+		if(user == null){
 			JOptionPane.showMessageDialog(loginDialog, "Wrong login information", "Warning!", JOptionPane.ERROR_MESSAGE);
 			loginDialog.setUserID("");
-			loginDialog.setUserName("");
+			loginDialog.setUserPassword("");
 		}
 		else{
 			this.user = user;
-			loginDialog.getMainWindow().setUserID(((Integer)user.getUserID()).toString());
+			FuelScreen screen = new FuelScreen();
+		/*	loginDialog.getMainWindow().setUserID(((Integer)user.getUserID()).toString());
 			loginDialog.getMainWindow().setUserName(user.getLastName()+" "+user.getFirstName());
 			JOptionPane.showMessageDialog(loginDialog, "Success...");
 			loginDialog.dispose();
@@ -59,8 +61,8 @@ public class LoginController implements Observer{
 			btnLogin.setActionCommand("Logout");
 			
 			loginDialog.enableControls(true);
-			loginDialog.fillRoleComboBox();
-		}*/
+			loginDialog.fillRoleComboBox();*/
+		}
 	}
 	
 	
