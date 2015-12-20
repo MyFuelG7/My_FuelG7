@@ -5,11 +5,11 @@ public class User extends Customer{
 
 	private String name;
 	private String lastName = "";
-	private Integer password;
+	private int password;
 	private String Email;
-	private Integer CreditNumber;
+	private int CreditNumber;
 	private String Status;
-	private Integer PlenNumber;
+	private int PlenNumber;
 	private String UserType;
 	private String UserID;
 
@@ -29,8 +29,9 @@ public class User extends Customer{
 		throw new UnsupportedOperationException();
 	}
 
-	public void getPassword() {
-		throw new UnsupportedOperationException();
+	public int getPassword() {
+		return this.password;
+		//throw new UnsupportedOperationException();
 	}
 
 	public void setPassword() {

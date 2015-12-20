@@ -16,14 +16,14 @@ import commen.Com;
 import ennam.ObjectType;
 import ennam.OperationType;
 import Client.SingletonClient;
-import GUI.FuelScreen;
 import GUI.LoginGUI;
+import GUI.UserGui;
 import Entity.Login;
 import Entity.User;;
 
 
-public class LoginController implements Observer{
-
+public class LoginController implements Observer 
+{
 	private SingletonClient client ;
 	private long requestNumber;
 	private HashMap<Long, Method> handlerMap;
@@ -31,9 +31,10 @@ public class LoginController implements Observer{
 	private LoginGUI loginDialog;
 	
 
-	public LoginController(LoginGUI loginGUI) throws IOException {
+	public LoginController(LoginGUI loginGUI) throws IOException 
+	{
 		// TODO Auto-generated constructor stub
-		
+ 
 		this.loginDialog = loginGUI;
 		client = SingletonClient.getInstance();
 		client.addObserver(this);
@@ -43,31 +44,34 @@ public class LoginController implements Observer{
 	}
 	
 
-	private void refreshUserInfoPanel(User user){
-		if(user == null){
+	private void refreshUserInfoPanel(User user)
+	{
+		if(user == null)
+		{
 			JOptionPane.showMessageDialog(loginDialog, "Wrong login information", "Warning!", JOptionPane.ERROR_MESSAGE);
 			loginDialog.setUserID("");
 			loginDialog.setUserPassword("");
 		}
-		else{
-			this.user = user;
-			FuelScreen screen = new FuelScreen();
-		/*	loginDialog.getMainWindow().setUserID(((Integer)user.getUserID()).toString());
-			loginDialog.getMainWindow().setUserName(user.getLastName()+" "+user.getFirstName());
-			JOptionPane.showMessageDialog(loginDialog, "Success...");
-			loginDialog.dispose();
-			JButton btnLogin = loginDialog.getLoginButton();
-			btnLogin.setText("Logout");
-			btnLogin.setActionCommand("Logout");
-			
-			loginDialog.enableControls(true);
-			loginDialog.fillRoleComboBox();*/
+		else
+		{
+			//Check the password
+			if ( (user.getPassword()) == (this.user.getPassword()) ) 
+			{
+				this.user = user;
+				UserGui screen = new UserGui();
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(loginDialog, "Wrong password", "Warning!", JOptionPane.ERROR_MESSAGE);
+				loginDialog.setUserID("");
+				loginDialog.setUserPassword("");
+			}
 		}
 	}
 	
 	
-	
-	public void login(LoginGUI loginGUI) throws IOException {
+	public void login(LoginGUI loginGUI) throws IOException 
+	{
 		// TODO Auto-generated method stub
 		System.out.println("in login");
 		int userId = loginGUI.getUserId();

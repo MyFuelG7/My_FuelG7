@@ -101,6 +101,7 @@ public class LoginGUI extends JDialog implements ActionListener {
 		panel.add(userId);
 			
 		passwordField = new JTextField();
+		passwordField.setText("1");
 		passwordField.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		passwordField.setBounds(182, 130, 137, 28);
 		panel.add(passwordField);
@@ -134,9 +135,11 @@ public class LoginGUI extends JDialog implements ActionListener {
 		try{
 		if (e.getSource() == loginButton)
 			//if (ctrl != null){ 
-				//UserGui usersceen = new UserGui(); function from meital
+			//	System.out.println("login press");
 				clientctr =new ClientController();
+				//System.out.println("ClientController create");
 				clientctr.connect();
+				System.out.println("connect create");
 				loginCrtl = new LoginController(this);
 				//ctrl.login();
 			//}

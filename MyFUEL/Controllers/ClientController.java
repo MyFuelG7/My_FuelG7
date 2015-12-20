@@ -36,7 +36,6 @@ public class ClientController {
 		
 		String ip = "localhost";
 		int port = 3306;
-		
 		client.setHost(ip);
 		client.setPort(port);
 		client.openConnection();
