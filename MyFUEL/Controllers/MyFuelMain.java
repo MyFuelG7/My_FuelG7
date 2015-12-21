@@ -11,11 +11,11 @@ public class MyFuelMain implements ILogin{
 	private StartWindow startwindow;
 	
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		new MyFuelMain();
 
 	}
-	
+	*/
 	
 	public MyFuelMain(){
 		startwindow = new StartWindow();

@@ -72,6 +72,19 @@ public class SingletonClient extends ObservableClient {
 	 *            The message from the UI.
 	 */
 	
+	  public void handleMessageFromClientUI(String message)
+	  {
+	    try
+	    {
+	    	sendToServer(message);
+	    }
+	    catch(IOException e)
+	    {
+	      System.out.println
+	        ("Could not send message to server.  Terminating client.");
+	      quit();
+	    }
+	  }
 
 	/**
 	 * This method terminates the client.
