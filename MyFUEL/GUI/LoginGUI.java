@@ -145,7 +145,6 @@ public class LoginGUI extends JDialog implements ActionListener {
 					System.out.println("connect create");
 					loginCrtl = new LoginController(this);
 					//ctrl.login();
-					int x;
 				//}
 			}
 			if (e.getSource() == cancelButton)

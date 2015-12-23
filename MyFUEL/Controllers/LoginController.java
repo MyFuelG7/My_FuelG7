@@ -76,6 +76,8 @@ public class LoginController implements Observer
 		System.out.println("in login");
 		int userId = loginGUI.getUserId();
 		String pass = loginGUI.getPassword();
+		this.user.setCustomerID(userId);
+		this.user.setPassword(pass);
 		System.out.println("get "+userId+" , "+pass);
 		Entity.Login login = new Entity.Login();
 		login.setUserID(userId);

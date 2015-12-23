@@ -23,7 +23,7 @@ public class Customer {
 	//	throw new UnsupportedOperationException();
 	}
 
-	public void setCustomerID() {
+	public void setCustomerID(int ID) {
 	//	throw new UnsupportedOperationException();
 	}
 

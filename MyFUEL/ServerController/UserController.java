@@ -68,12 +68,12 @@ public class UserController extends ObjectManager
 				if( rs.next()){
 					
 				//get all the information
-				user.setCustomerID();//rs.getInt("userID"));
+				user.setCustomerID(rs.getInt("userID"));//rs.getInt("userID"));
 				user.setName();//rs.getString("Name"));
 				user.setLastName();//rs.getString("lastName");
 				user.getCustomerID();//rs.getInt("ID"));
 				user.setEmail();//rs.getString("email"));
-				user.setPassword();
+				user.setPassword(rs.getString("password"));
 				user.setCreditNumber();
 				user.setCustomerType();
 				user.setPlenNumber();
@@ -89,12 +89,12 @@ public class UserController extends ObjectManager
 				
 				if( rs.next()){
 					//get all the information
-					worker.setCustomerID();//rs.getInt("userID"));
+					worker.setCustomerID(rs.getInt("userID"));//rs.getInt("userID"));
 					worker.setName();//rs.getString("Name"));
 					worker.setLastName();//rs.getString("lastName");
 					worker.getCustomerID();//rs.getInt("ID"));
 					worker.setEmail();//rs.getString("email"));
-					worker.setPassword();
+					worker.setPassword(rs.getString("password"));
 					worker.setCreditNumber();
 					worker.setCustomerType();
 					worker.setPlenNumber();

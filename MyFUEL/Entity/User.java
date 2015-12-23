@@ -34,7 +34,7 @@ public class User extends Customer{
 		//throw new UnsupportedOperationException();
 	}
 
-	public void setPassword() {
+	public void setPassword(String pass) {
 		throw new UnsupportedOperationException();
 	}
 
