@@ -116,7 +116,7 @@ public class Server extends AbstractServer {
 		  catch(ArrayIndexOutOfBoundsException e)
 		  {
 			  user = "root";			//user
-			  password = "Braude";		//password
+			  password = "1234";		//password
 		  }
 		    
 		  try 
