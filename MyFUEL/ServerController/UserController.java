@@ -17,7 +17,7 @@ import ennam.UserType;
  * This controller is responsible to load information
  * about required User from database.<p>
 
- *  @author_Group_3
+ *  @author_Group_7
  *
  */
 public class UserController extends ObjectManager
