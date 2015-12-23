@@ -8,6 +8,7 @@ import java.util.Observer;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 import com.sun.security.ntlm.Client;
 
@@ -18,6 +19,7 @@ import Client.SingletonClient;
 import GUI.FuelScreen;
 import GUI.LoginGUI;
 import Entity.Login;
+import Entity.Sale;
 import Entity.User;;
 
 
@@ -38,7 +40,14 @@ public class FuelController  implements Observer{
 		client.addObserver(this);
 		FuelScreen.setCtrl(this);
 		handlerMap = new HashMap<>();*/
-		//Fuel(FuelScreen);
+		//
+		try {
+			client = SingletonClient.getInstance();
+			client.addObserver(this);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Fuel(FuelScreen);
 	}
 	
 
@@ -65,14 +74,15 @@ public class FuelController  implements Observer{
 	
 	
 	
-	/*public void Fuel(FuelScreen FuelScreen) throws IOException {
-		System.out.println("in login");
-		int userId = loginGUI.getUserId();
-		String pass = loginGUI.getPassword();
-		System.out.println("get "+userId+" , "+pass);
-		/*Entity.*/Login login = new /*Entity.*/Login();
-	/*	login.setUserID(userId);
-		login.setPassword(pass);
+	public void Fuel(FuelScreen FuelScreen) throws IOException {
+		double quntity = FuelScreen.getQuntity();
+		Sale sale = new Sale();
+		//LoginController.user.getCreditNumber();
+		sale.setFuleCount(quntity);
+		/*
+		sale.setCarID(LoginController.user.getCarId); להוסיף גישה ל DB ולבדוק לאיזה רכב שייך הלקוח
+		*/
+		sale.set
 		System.out.println("set "+userId+" , "+pass);
 		Com cmd = new Com();
 		cmd.setType(ObjectType.LOGIN);

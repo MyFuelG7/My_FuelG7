@@ -27,7 +27,7 @@ public class LoginController implements Observer
 	private SingletonClient client ;
 	private long requestNumber;
 	private HashMap<Long, Method> handlerMap;
-	private User user;
+	public static User user;
 	private LoginGUI loginDialog;
 	
 

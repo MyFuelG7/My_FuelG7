@@ -12,6 +12,7 @@ import javax.swing.JList;
 import Controllers.ClientController;
 import Controllers.FuelController;
 import Controllers.LoginController;
+import Controllers.UserController;
 
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -22,7 +23,7 @@ import javax.swing.DropMode;
 
 public class FuelScreen extends JFrame implements ActionListener{
 	
-	private FuelController ctrl;
+	private UserController ctrl;
 	private ClientController clientctr;
 	private FuelController FuelCrtl;
 	private JLabel lblSelectFuelType;
@@ -32,7 +33,7 @@ public class FuelScreen extends JFrame implements ActionListener{
 	private JButton btnBack;
 	private JTextField txtEnterQuntity;
 	
-	public FuelScreen() {
+	public FuelScreen(UserController userController) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		getContentPane().setBackground(Color.CYAN);
@@ -77,8 +78,12 @@ public class FuelScreen extends JFrame implements ActionListener{
 		this.setVisible(true);
 	}
 
-	public void setCtrl(FuelController ctrl) {
+	public void setCtrl(UserController ctrl) {
 		this.ctrl =  ctrl;
+	}
+	public double getQuntity()
+	{
+		return Double.parseDouble(txtEnterQuntity.getText());
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -86,8 +91,8 @@ public class FuelScreen extends JFrame implements ActionListener{
 			if (e.getSource() == button_95){
 				//if (ctrl != null){ 
 					//UserGui usersceen = new UserGui(); function from meital
-					clientctr =new ClientController();
-					clientctr.connect();
+					//clientctr =new ClientController();
+					//clientctr.connect();
 					FuelCrtl = new FuelController(this);
 					//ctrl.login();
 				}

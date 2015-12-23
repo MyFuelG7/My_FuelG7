@@ -11,8 +11,10 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.UIManager;
 
+import Controllers.UserController;
+
 public class FuelForHomeScreen extends JFrame implements ActionListener{
-	public FuelForHomeScreen() {
+	public FuelForHomeScreen(UserController userController) {
 		getContentPane().setBackground(Color.CYAN);
 		getContentPane().setForeground(Color.CYAN);
 		setTitle("Fuel for home");

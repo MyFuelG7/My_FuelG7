@@ -2,7 +2,7 @@ package Entity;
 
 public class Sale {
 
-	private Integer SaleNumber;
+	private int SaleNumber;
 	private Double FuleCount;
 	private String Date;
 	private Double Price;
@@ -10,64 +10,64 @@ public class Sale {
 	private String StationID;
 	private String CarID;
 
-	public void getSaleNumber() {
-		throw new UnsupportedOperationException();
+	public int getSaleNumber() {
+		return SaleNumber;
 	}
 
-	public void setSaleNumber() {
-		throw new UnsupportedOperationException();
+	public void setSaleNumber(int SaleNumber) {
+		this.SaleNumber = SaleNumber;
 	}
 
-	public void getFuleCount() {
-		throw new UnsupportedOperationException();
+	public Double getFuleCount() {
+		return FuleCount;
 	}
 
-	public void setFuleCount() {
-		throw new UnsupportedOperationException();
+	public void setFuleCount(Double FuleCount) {
+		this.FuleCount = FuleCount;
 	}
 
-	public void getDate() {
-		throw new UnsupportedOperationException();
+	public String getDate() {
+		return Date;
 	}
 
-	public void setDate() {
-		throw new UnsupportedOperationException();
+	public void setDate(String Date) {
+		this.Date = Date;
 	}
 
-	public void getPrice() {
-		throw new UnsupportedOperationException();
+	public Double getPrice() {
+		return Price;
 	}
 
-	public void setPrice() {
-		throw new UnsupportedOperationException();
+	public void setPrice(Double Price) {
+		this.Price = Price;
 	}
 
-	public void getItemID() {
-		throw new UnsupportedOperationException();
+	public ItemType getItemID() {
+		return itemID;
 	}
 
-	public void setItemID() {
-		throw new UnsupportedOperationException();
+	public void setItemID(ItemType itemID) {
+		this.itemID = itemID;
 	}
 
-	public void getStationID() {
-		throw new UnsupportedOperationException();
+	public String getStationID() {
+		return StationID;
 	}
 
-	public void setStationID() {
-		throw new UnsupportedOperationException();
+	public void setStationID(String StationID) {
+		this.StationID = StationID;
 	}
 
-	public void getCarID() {
-		throw new UnsupportedOperationException();
+	public String getCarID() {
+		return CarID;
 	}
 
-	public void setCarID() {
-		throw new UnsupportedOperationException();
+	public void setCarID(String CarID) {
+		this.CarID = CarID;
 	}
 
 	public Sale() {
-		throw new UnsupportedOperationException();
+
 	}
 
 }
