@@ -18,6 +18,7 @@ import javax.swing.border.EmptyBorder;
 
 import Controllers.ClientController;
 import Controllers.LoginController;
+import Controllers.MyFuelMain;
 
 public class LoginGUI extends JDialog implements ActionListener {
 	/**
@@ -132,19 +133,27 @@ public class LoginGUI extends JDialog implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		try{
-		if (e.getSource() == loginButton)
-			//if (ctrl != null){ 
-			//	System.out.println("login press");
-				clientctr =new ClientController();
-				//System.out.println("ClientController create");
-				clientctr.connect();
-				System.out.println("connect create");
-				loginCrtl = new LoginController(this);
-				//ctrl.login();
-			//}
-		if (e.getSource() == cancelButton) 
-			frame.dispose();
+		try
+		{
+			if (e.getSource() == loginButton)
+			{
+				//if (ctrl != null){ 
+				//	System.out.println("login press");
+					clientctr =new ClientController();
+					//System.out.println("ClientController create");
+					clientctr.connect();
+					System.out.println("connect create");
+					loginCrtl = new LoginController(this);
+					//ctrl.login();
+					int x;
+				//}
+			}
+			if (e.getSource() == cancelButton)
+			{
+				System.out.println("cancel press");
+				frame.dispose();
+				MyFuelMain screen = new MyFuelMain();
+			}
 		}
 		catch (IOException ex) {
 			ex.printStackTrace();

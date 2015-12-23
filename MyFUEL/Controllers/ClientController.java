@@ -16,7 +16,7 @@ public class ClientController {
 
 	SingletonClient client;
 	//ClientConnectionDialog clientConnectionDialog;
-	LoginGUI logingui;
+	//LoginGUI logingui;
 	
 	public ClientController(/*LoginController loginCrtl*/) throws IOException{
 	//	this.logingui = loginCrtl;
