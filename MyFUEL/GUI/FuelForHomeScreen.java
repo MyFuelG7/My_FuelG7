@@ -9,6 +9,7 @@ import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.UIManager;
 
 public class FuelForHomeScreen extends JFrame implements ActionListener{
 	public FuelForHomeScreen() {
@@ -28,7 +29,7 @@ public class FuelForHomeScreen extends JFrame implements ActionListener{
 		getContentPane().add(btnViewOld);
 		
 		JButton btnBack = new JButton("Back");
-		btnBack.setBackground(Color.LIGHT_GRAY);
+		btnBack.setBackground(UIManager.getColor("CheckBoxMenuItem.background"));
 		btnBack.setBounds(22, 28, 97, 25);
 		getContentPane().add(btnBack);
 		

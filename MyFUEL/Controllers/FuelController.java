@@ -1,6 +1,5 @@
 package Controllers;
 
-
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -16,71 +15,63 @@ import commen.Com;
 import ennam.ObjectType;
 import ennam.OperationType;
 import Client.SingletonClient;
+import GUI.FuelScreen;
 import GUI.LoginGUI;
-import GUI.UserGui;
 import Entity.Login;
 import Entity.User;;
 
 
-public class LoginController implements Observer 
-{
+public class FuelController  implements Observer{
+
 	private SingletonClient client ;
 	private long requestNumber;
 	private HashMap<Long, Method> handlerMap;
 	private User user;
-	private LoginGUI loginDialog;
+	private FuelScreen FuelDialog;
 	
 
-	public LoginController(LoginGUI loginGUI) throws IOException 
-	{
+	public FuelController(FuelScreen FuelScreen) throws IOException {
 		// TODO Auto-generated constructor stub
- 
-		this.loginDialog = loginGUI;
-		client = SingletonClient.getInstance();
+		
+		this.FuelDialog = FuelScreen;
+		/*	client = SingletonClient.getInstance();
 		client.addObserver(this);
-		loginGUI.setCtrl(this);
-		handlerMap = new HashMap<>();
-		login(loginGUI);
+		FuelScreen.setCtrl(this);
+		handlerMap = new HashMap<>();*/
+		//Fuel(FuelScreen);
 	}
 	
 
-	private void refreshUserInfoPanel(User user)
-	{
-		if(user == null)
-		{
+	private void refreshUserInfoPanel(User user){
+	/*	if(user == null){
 			JOptionPane.showMessageDialog(loginDialog, "Wrong login information", "Warning!", JOptionPane.ERROR_MESSAGE);
 			loginDialog.setUserID("");
-			loginDialog.setUserPassword("");
+			loginDialog.setUserName("");
 		}
-		else
-		{
-			//Check the password
-			if ( (user.getPassword()) == (this.user.getPassword()) ) 
-			{
-				this.user = user;
-				UserGui screen = new UserGui();
-			}
-			else
-			{
-				JOptionPane.showMessageDialog(loginDialog, "Wrong password", "Warning!", JOptionPane.ERROR_MESSAGE);
-				loginDialog.setUserID("");
-				loginDialog.setUserPassword("");
-			}
-		}
+		else{
+			this.user = user;
+			loginDialog.getMainWindow().setUserID(((Integer)user.getUserID()).toString());
+			loginDialog.getMainWindow().setUserName(user.getLastName()+" "+user.getFirstName());
+			JOptionPane.showMessageDialog(loginDialog, "Success...");
+			loginDialog.dispose();
+			JButton btnLogin = loginDialog.getLoginButton();
+			btnLogin.setText("Logout");
+			btnLogin.setActionCommand("Logout");
+			
+			loginDialog.enableControls(true);
+			loginDialog.fillRoleComboBox();
+		}*/
 	}
 	
 	
-	public void login(LoginGUI loginGUI) throws IOException 
-	{
-		// TODO Auto-generated method stub
+	
+	/*public void Fuel(FuelScreen FuelScreen) throws IOException {
 		System.out.println("in login");
 		int userId = loginGUI.getUserId();
 		String pass = loginGUI.getPassword();
-		this.user.setCustomerID(userId);
-		this.user.setPassword(pass);
 		System.out.println("get "+userId+" , "+pass);
 		/*Entity.*/Login login = new /*Entity.*/Login();
-		login.setUserID(userId);
+	/*	login.setUserID(userId);
 		login.setPassword(pass);
 		System.out.println("set "+userId+" , "+pass);
 		Com cmd = new Com();
@@ -100,7 +91,7 @@ public class LoginController implements Observer
 		client.sendToServer(cmd);
 		System.out.println("after send to server");
 		
-	}
+	}*/
 	@Override
 	public void update(Observable arg0, Object arg1) {
 		// TODO Auto-generated method stub
